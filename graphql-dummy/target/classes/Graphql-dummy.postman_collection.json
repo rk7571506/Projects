@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "804b8746-4381-45fe-9de0-c47c48e72594",
+		"name": "Graphql-dummy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "lookupEmployee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\": \"query lookupEmployee{lookupEmployee{id name city}}\",\r\n    \"variables\": {},\r\n    \"operationName\": \"lookupEmployee\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lookupEmployeeByID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\": \"query lookupEmployeeByID($id:String!){lookupEmployeeByID(id:$id){id name}}\",\r\n    \"variables\": {\r\n        \"id\":1\r\n    },\r\n    \"operationName\": \"lookupEmployeeByID\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateEmployee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\": \"mutation updateEmployee($emp:EmployeeInput!){updateEmployee(emp:$emp){id name city}}\",\r\n    \"variables\": {\r\n        \"emp\": {\r\n            \"id\": 1,\r\n            \"name\": \"Ravi\",\r\n            \"city\": \"Jaipur\"\r\n        }\r\n    },\r\n    \"operationName\": \"updateEmployee\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createEmployee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\": \"mutation createEmployee($emp:EmployeeInput!){createEmployee(emp:$emp){id name city}}\",\r\n    \"variables\": {\r\n        \"emp\": {\r\n            \"id\": 10,\r\n            \"name\": \"Shubham\",\r\n            \"city\": \"Jaipur\"\r\n        }\r\n    },\r\n    \"operationName\": \"createEmployee\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteEmployee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\": \"mutation deleteEmployee($id:String!){deleteEmployee(id:$id)}\",\r\n    \"variables\": {\r\n        \"id\": 1\r\n    },\r\n    \"operationName\": \"deleteEmployee\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
