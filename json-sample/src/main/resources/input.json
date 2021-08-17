@@ -1,0 +1,5 @@
+{
+	"1":{"type":"circle","radius":2},
+	"2":{"type":"rectangle","l":2,"b":4},
+	"3":{"type":"square","side":2}
+}
